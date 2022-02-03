@@ -56,15 +56,39 @@
 		8B9C57CF27AACED0009253E8 /* TestMetide */ = {
 			isa = PBXGroup;
 			children = (
+				BD61C52127ABFFDA0015FEBD /* ModelTestMetide */,
+				BD61C52027ABFFC90015FEBD /* ControllerTestMetide */,
+				BD61C51F27ABFF840015FEBD /* ViewTestMetide */,
 				8B9C57D027AACED0009253E8 /* AppDelegate.swift */,
-				8B9C57D227AACED0009253E8 /* SceneDelegate.swift */,
 				8B9C57D427AACED0009253E8 /* ViewController.swift */,
+				8B9C57D227AACED0009253E8 /* SceneDelegate.swift */,
 				8B9C57D627AACED0009253E8 /* Main.storyboard */,
 				8B9C57D927AACEE1009253E8 /* Assets.xcassets */,
 				8B9C57DB27AACEE1009253E8 /* LaunchScreen.storyboard */,
 				8B9C57DE27AACEE1009253E8 /* Info.plist */,
 			);
 			path = TestMetide;
+			sourceTree = "<group>";
+		};
+		BD61C51F27ABFF840015FEBD /* ViewTestMetide */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewTestMetide;
+			sourceTree = "<group>";
+		};
+		BD61C52027ABFFC90015FEBD /* ControllerTestMetide */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ControllerTestMetide;
+			sourceTree = "<group>";
+		};
+		BD61C52127ABFFDA0015FEBD /* ModelTestMetide */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelTestMetide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
