@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3E41D927AD5CD20069AA54 /* ModelCountryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3E41D827AD5CD20069AA54 /* ModelCountryRow.swift */; };
 		8B9C57D127AACED0009253E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C57D027AACED0009253E8 /* AppDelegate.swift */; };
 		8B9C57D327AACED0009253E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C57D227AACED0009253E8 /* SceneDelegate.swift */; };
 		8B9C57D527AACED0009253E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C57D427AACED0009253E8 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B3E41D827AD5CD20069AA54 /* ModelCountryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCountryRow.swift; sourceTree = "<group>"; };
 		8B9C57CD27AACED0009253E8 /* TestMetide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMetide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9C57D027AACED0009253E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B9C57D227AACED0009253E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B3E41D327AD5AC60069AA54 /* ViewTestMetide */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewTestMetide;
+			sourceTree = "<group>";
+		};
 		8B9C57C427AACED0009253E8 = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +69,9 @@
 		8B9C57CF27AACED0009253E8 /* TestMetide */ = {
 			isa = PBXGroup;
 			children = (
+				8B3E41D327AD5AC60069AA54 /* ViewTestMetide */,
 				BD61C52127ABFFDA0015FEBD /* ModelTestMetide */,
 				BD61C52027ABFFC90015FEBD /* ControllerTestMetide */,
-				BD61C51F27ABFF840015FEBD /* ViewTestMetide */,
 				8B9C57D027AACED0009253E8 /* AppDelegate.swift */,
 				8B9C57D427AACED0009253E8 /* ViewController.swift */,
 				8B9C57D227AACED0009253E8 /* SceneDelegate.swift */,
@@ -72,13 +81,6 @@
 				8B9C57DE27AACEE1009253E8 /* Info.plist */,
 			);
 			path = TestMetide;
-			sourceTree = "<group>";
-		};
-		BD61C51F27ABFF840015FEBD /* ViewTestMetide */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewTestMetide;
 			sourceTree = "<group>";
 		};
 		BD61C52027ABFFC90015FEBD /* ControllerTestMetide */ = {
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				BD61C52427AD285D0015FEBD /* ModelCountry.swift */,
+				8B3E41D827AD5CD20069AA54 /* ModelCountryRow.swift */,
 			);
 			path = ModelTestMetide;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3E41D927AD5CD20069AA54 /* ModelCountryRow.swift in Sources */,
 				BD61C52527AD285D0015FEBD /* ModelCountry.swift in Sources */,
 				8B9C57D527AACED0009253E8 /* ViewController.swift in Sources */,
 				8B9C57D127AACED0009253E8 /* AppDelegate.swift in Sources */,

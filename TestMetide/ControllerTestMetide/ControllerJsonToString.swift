@@ -11,6 +11,7 @@ import Foundation
 import FoundationNetworking
 #endif
 
+//FUNZIONE
 func jsonToCountryTemp (){
     var semaphore = DispatchSemaphore (value: 0)
 
@@ -40,16 +41,20 @@ func jsonToCountryTemp (){
     semaphore.wait()
 }
 
+//FUNZIONA
 func printCountryName(country: [CountryTemp]){
     for c in country{
-        print(c.name)
+                print(c.name)
     }
 }
 
+//FUNZIONA ANCHE STAMPANDO URL O ALTRI TIPI
 func printFlag(country: [CountryTemp]){
     for c in country{
         if (c.name == "Canada"){
-            print(c.flag)
+            print("TEST\n")
+            let fileUrl = URL(string: c.flag)
+            print(fileUrl)
             break
         }
     }
