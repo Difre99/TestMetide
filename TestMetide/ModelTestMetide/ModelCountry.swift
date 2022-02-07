@@ -8,8 +8,8 @@
 import Foundation
 
 struct CountryTemp: Decodable{
-    let code2l: String
-    let name: String
+    var code2l: String
+    var name: String
     let flag: String
     let latitude: String?
     let longitude: String?

@@ -8,30 +8,41 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //CELLA NON CONNESSA PERCHé DA ERRORE
-    var country :[String] = []
+    //var country :[String] = []
     
+    @IBOutlet weak var tblCountries:UITableView!
+    
+    var countries :[CountryTemp]? {
+        didSet {
+            self.tblCountries.reloadData()
+        }
+    }
+    
+    var managerApi = ManagerApi()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareData()
-    }
-    func prepareData(){
-        self.country = ["Italia", "Germania", "Olanda"]
+        
+        self.countries = [CountryTemp]()
+        self.managerApi.jsonToCountryTemp { (countryTemp) in
+            self.countries?.removeAll()
+            self.countries?.append(contentsOf: countryTemp)
+        }
+        
     }
 }
 
 extension ViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return country.count
+        return countries?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "list_cell", for: indexPath) as! ListTableViewCell
             
-        cell.titleLbl.text = self.country[indexPath.row]
+        cell.loadData(country: self.countries![indexPath.row])
             
         return cell
     }
@@ -40,7 +51,7 @@ extension ViewController : UITableViewDataSource {
 extension ViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let alert = UIAlertController(title: "Country scelto", message: self.country[indexPath.row], preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Country scelto", message: self.countries?[indexPath.row].name, preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         
