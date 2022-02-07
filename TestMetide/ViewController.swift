@@ -12,11 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tblCountries:UITableView!
     
-    var countries :[CountryTemp]? {
-        didSet {
-            self.tblCountries.reloadData()
-        }
-    }
+    var countries :[CountryTemp]?
     
     var managerApi = ManagerApi()
     
@@ -51,7 +47,10 @@ extension ViewController : UITableViewDataSource {
 extension ViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let alert = UIAlertController(title: "Country scelto", message: self.countries?[indexPath.row].name, preferredStyle: UIAlertController.Style.alert)
+        
+        let message:String = "Latitude" + (self.countries?[indexPath.row].latitude)! + "\n" + "Longitude" + (self.countries?[indexPath.row].longitude)!
+
+        let alert = UIAlertController(title: self.countries?[indexPath.row].name, message: message, preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         

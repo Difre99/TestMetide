@@ -1,15 +1,13 @@
 //
-//  ListTableViewCell.swift
+//  TableViewCell.swift
 //  TestMetide
 //
 //  Created by Marco di Fresco on 07/02/22.
 //
 
 import UIKit
-
-class ListTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var imageFlag: UIImageView!
+// FATTO COPIA E INCOLLA MA NON HO FATTO ANCORA OUTLET
+class TableViewCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,11 +22,5 @@ class ListTableViewCell: UITableViewCell {
     
     func loadData(country:CountryTemp){
         self.titleLbl.text = country.name
-        let url = URL(string:country.flag)
-        if let data = try? Data(contentsOf: url!)
-            {
-            let image: UIImage = UIImage(data: data)!
-            self.imageFlag.image = image
-            }
     }
 }
