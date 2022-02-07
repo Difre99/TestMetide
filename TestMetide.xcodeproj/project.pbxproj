@@ -16,6 +16,7 @@
 		8B9C57DD27AACEE1009253E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9C57DB27AACEE1009253E8 /* LaunchScreen.storyboard */; };
 		BD61C52327AD27720015FEBD /* ControllerJsonToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61C52227AD27720015FEBD /* ControllerJsonToString.swift */; };
 		BD61C52527AD285D0015FEBD /* ModelCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61C52427AD285D0015FEBD /* ModelCountry.swift */; };
+		BD61C52A27B11FFB0015FEBD /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61C52927B11FFB0015FEBD /* ListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8B9C57DE27AACEE1009253E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD61C52227AD27720015FEBD /* ControllerJsonToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerJsonToString.swift; sourceTree = "<group>"; };
 		BD61C52427AD285D0015FEBD /* ModelCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCountry.swift; sourceTree = "<group>"; };
+		BD61C52927B11FFB0015FEBD /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				8B9C57D427AACED0009253E8 /* ViewController.swift */,
 				8B9C57D227AACED0009253E8 /* SceneDelegate.swift */,
 				8B9C57D627AACED0009253E8 /* Main.storyboard */,
+				BD61C52927B11FFB0015FEBD /* ListTableViewCell.swift */,
 				8B9C57D927AACEE1009253E8 /* Assets.xcassets */,
 				8B9C57DB27AACEE1009253E8 /* LaunchScreen.storyboard */,
 				8B9C57DE27AACEE1009253E8 /* Info.plist */,
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD61C52A27B11FFB0015FEBD /* ListTableViewCell.swift in Sources */,
 				8B3E41D927AD5CD20069AA54 /* ModelCountryRow.swift in Sources */,
 				BD61C52527AD285D0015FEBD /* ModelCountry.swift in Sources */,
 				8B9C57D527AACED0009253E8 /* ViewController.swift in Sources */,

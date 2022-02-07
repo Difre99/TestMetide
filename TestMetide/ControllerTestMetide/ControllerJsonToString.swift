@@ -10,7 +10,7 @@ import Foundation
 #if canImport(FoundationNetworking)
 import FoundationNetworking
 #endif
-
+let country:[CountryTemp] = []
 //FUNZIONE
 func jsonToCountryTemp (){
     var semaphore = DispatchSemaphore (value: 0)
@@ -29,8 +29,9 @@ func jsonToCountryTemp (){
         do{
             let decoder: JSONDecoder = JSONDecoder.init()
             let countryTemp: [CountryTemp] = try decoder.decode([CountryTemp].self, from: data)
+            //FARE NA CALLBACK
             //printCountryName(country: countryTemp)
-            printFlag(country: countryTemp)
+            //printFlag(country: countryTemp)
         }
         catch let e{
             print(e)
@@ -39,6 +40,10 @@ func jsonToCountryTemp (){
     }
     task.resume()
     semaphore.wait()
+}
+
+func getCountryTemp(countryTemp: [CountryTemp])->[CountryTemp]?{
+    return country
 }
 
 //FUNZIONA
