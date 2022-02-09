@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var countryTest :[CountryTemp]?
-    
     @IBOutlet weak var tblCountries:UITableView!
     
     var countries :[CountryTemp]?
@@ -21,12 +19,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.countryTest = [CountryTemp]()
         self.countries = [CountryTemp]()
         self.managerApi.jsonToCountryTemp { (countryTemp) in
             self.countries?.removeAll()
             self.countries?.append(contentsOf: countryTemp)
             self.countries = sortCountries(countries: self.countries ?? [])
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.tblCountries.reloadData()
+              }
+            
         }
     }
 }
@@ -40,7 +42,7 @@ extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "list_cell", for: indexPath) as! ListTableViewCell
-            
+        
         cell.loadData(country: self.countries![indexPath.row])
         
         return cell
@@ -59,11 +61,15 @@ extension ViewController : UITableViewDelegate {
             message = userDafault.string(forKey: code2l) ?? ""
         }
         
-        let alert = UIAlertController(title: self.countries?[indexPath.row].name, message: message, preferredStyle: UIAlertController.Style.alert)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
+        vc.country = countries![indexPath.row]
+         navigationController?.pushViewController(vc, animated: true)
+        /*let alert = UIAlertController(title: self.countries?[indexPath.row].name, message: message, preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         
-        self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)*/
     }
 }
 
@@ -73,4 +79,5 @@ extension ViewController : UITextFieldDelegate{
         return true
     }
 }
+
 
