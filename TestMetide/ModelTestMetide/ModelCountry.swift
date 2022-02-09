@@ -13,12 +13,14 @@ struct CountryTemp: Decodable{
     let flag: String
     let latitude: String?
     let longitude: String?
+    var index: Int?
 }
 
 struct Country{
-    let code2l: String
-    let name: String
-    let flag: URL
-    let latitude: Float?
-    let longitude: Float
+    var code2l: String
+    var name: String
+    var flag: URL
+    var latitude: Double?
+    var longitude: Double?
+    var distMetide: Double?
 }
