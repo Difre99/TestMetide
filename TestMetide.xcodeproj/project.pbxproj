@@ -17,6 +17,7 @@
 		BD61C52527AD285D0015FEBD /* ModelCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61C52427AD285D0015FEBD /* ModelCountry.swift */; };
 		BD61C52A27B11FFB0015FEBD /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61C52927B11FFB0015FEBD /* ListTableViewCell.swift */; };
 		BD61C53427B180800015FEBD /* ControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61C53327B180800015FEBD /* ControllerViewController.swift */; };
+		BD8ABD6B27B5595000E7CD06 /* datasource.json in Resources */ = {isa = PBXBuildFile; fileRef = BD8ABD6A27B5595000E7CD06 /* datasource.json */; };
 		BDFAEA0427B3FEFB005D8858 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFAEA0327B3FEFB005D8858 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		BD61C52427AD285D0015FEBD /* ModelCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCountry.swift; sourceTree = "<group>"; };
 		BD61C52927B11FFB0015FEBD /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		BD61C53327B180800015FEBD /* ControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerViewController.swift; sourceTree = "<group>"; };
+		BD8ABD6A27B5595000E7CD06 /* datasource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = datasource.json; sourceTree = "<group>"; };
 		BDFAEA0327B3FEFB005D8858 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				8B9C57D627AACED0009253E8 /* Main.storyboard */,
 				8B9C57DE27AACEE1009253E8 /* Info.plist */,
 				8B9C57D927AACEE1009253E8 /* Assets.xcassets */,
+				BD8ABD6A27B5595000E7CD06 /* datasource.json */,
 			);
 			path = TestMetide;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				8B9C57DD27AACEE1009253E8 /* LaunchScreen.storyboard in Resources */,
 				8B9C57DA27AACEE1009253E8 /* Assets.xcassets in Resources */,
 				8B9C57D827AACED0009253E8 /* Main.storyboard in Resources */,
+				BD8ABD6B27B5595000E7CD06 /* datasource.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

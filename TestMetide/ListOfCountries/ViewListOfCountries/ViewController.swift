@@ -64,12 +64,7 @@ extension ViewController : UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
         vc.country = countries![indexPath.row]
-         navigationController?.pushViewController(vc, animated: true)
-        /*let alert = UIAlertController(title: self.countries?[indexPath.row].name, message: message, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)*/
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
